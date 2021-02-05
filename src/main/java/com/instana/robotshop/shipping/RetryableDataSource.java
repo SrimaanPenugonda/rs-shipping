@@ -16,7 +16,7 @@ class RetryableDataSource extends AbstractDataSource {
     }
 
     @Override
-    @Retryable(maxAttempts = 10, backoff = @Backoff(multiplier = 2.3, maxDelay = 30000))
+    @Retryable(maxAttempts = 50, backoff = @Backoff(multiplier = 2.3, maxDelay = 30000))
     public Connection getConnection() throws SQLException {
         return delegate.getConnection();
     }
