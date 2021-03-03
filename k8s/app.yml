@@ -13,6 +13,7 @@ spec:
     metadata:
       annotations:
         co.elastic.logs/enabled: "true"
+        co.elastic.logs/1.include_lines: '*c.instana.robotshop.shipping.Controller*'
       labels:
         app: shipping
     spec:
