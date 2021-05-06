@@ -8,8 +8,8 @@ trigger:
     include: [ "*" ]
   tags:
     include: [ "*" ]
-pool:
-  vmImage: Default
+
+pool: Default
 
 steps:
 
