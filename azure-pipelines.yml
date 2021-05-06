@@ -22,7 +22,8 @@ steps:
 #      tags: '$(Build.BuildId)'
 #
   - script: |
-      mvn package
+      sudo yum install maven -y
+      mvn clean package
     displayName: Compile Code
 #
 #  - script: |
