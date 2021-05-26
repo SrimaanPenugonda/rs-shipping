@@ -28,10 +28,15 @@ steps:
 #
   - script: |
       curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/sonar-scanner/install.sh | sudo bash
+      export SONAR_SCANNER_OPTS="-Xmx512m"
     displayName: 'Setup Sonar Scanner'
 
   - script: |
-      sonar-scanner -Dsonar.projectKey=shipping -Dsonar.sources=. -Dsonar.host.url=http://3.236.121.125:9000 -Dsonar.login=52ccc63af3a1bf49e8940d89d370ff07bf1bf341 
+      sonar-scanner \
+          -Dsonar.projectKey=shipping \
+          -Dsonar.sources=. \
+          -Dsonar.host.url=http://34.204.176.100:9000 \
+          -Dsonar.login=d5dc4c7057893883c72eb9d0662f5b684dc89a44
     displayName: 'Run Sonar Scan'
 #
   - script: |
