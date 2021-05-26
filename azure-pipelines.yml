@@ -26,13 +26,13 @@ steps:
       mvn clean package
     displayName: Compile Code
 #
-#  - script: |
-#      curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/sonar-scanner/install.sh | sudo bash
-#    displayName: 'Setup Sonar Scanner'
-#
-#  - script: |
-#      sonar-scanner -Dsonar.projectKey=shipping -Dsonar.sources=. -Dsonar.host.url=http://52.91.45.74:9000 -Dsonar.login=de8afb42f8814e0f5a1f7bc59627fc6fdaa67bad
-#    displayName: 'Run Sonar Scan'
+  - script: |
+      curl -s https://raw.githubusercontent.com/linuxautomations/labautomation/master/tools/sonar-scanner/install.sh | sudo bash
+    displayName: 'Setup Sonar Scanner'
+
+  - script: |
+      sonar-scanner -Dsonar.projectKey=shipping -Dsonar.sources=. -Dsonar.host.url=http://3.236.121.125:9000 -Dsonar.login=373459d9f9ecbd13ca3d907f9ec6f6816b544652 
+    displayName: 'Run Sonar Scan'
 #
   - script: |
       mkdir $(Build.SourcesDirectory)/publish
