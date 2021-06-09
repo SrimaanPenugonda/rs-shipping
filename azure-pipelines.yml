@@ -24,7 +24,7 @@ steps:
       repository: 'srimaanaws2021/rs-shipping'
       command: 'buildAndPush'
       Dockerfile: '**/Dockerfile'
-      tags: 'latest'
+      tags: '$(Build.BuildId)'
 #
 #  - script: |
 #      mvn  package

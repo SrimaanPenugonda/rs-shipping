@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: shipping
-          image: rkalluru/d53-rs-shipping:VERSION
+          image: srimaanaws2021/rs-shipping:VERSION
           ports:
             - containerPort: 8080
           env:
