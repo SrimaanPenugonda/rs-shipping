@@ -11,3 +11,5 @@ CMD       ["java", "-jar", "/shipping.jar"]
 
 
 #docker multi stage build
+#mvn command will downald many packages so just take the jar file from above build
+#
